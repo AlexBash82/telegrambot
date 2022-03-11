@@ -7,10 +7,10 @@ const sequelize = require('./db')
 const UserModel = require('./models')
 
 const startGame = async (chatId) => {
-    await bot.sendMessage(chatId, 'Угадай число от 0 до 9')
+    await bot.sendMessage(chatId, 'Guess the number from 0 to 9')
     const randnum = Math.floor(Math.random() * 10)
     chats[chatId] = randnum //в массив добавляем: ключ-айди чата, а значение ранд.число
-    await bot.sendMessage(chatId, 'Вперед! :)', gameOptions)
+    await bot.sendMessage(chatId, 'Go! :)', gameOptions)
 }
 
 const start = async () => {
